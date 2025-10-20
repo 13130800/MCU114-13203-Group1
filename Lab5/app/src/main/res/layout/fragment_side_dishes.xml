@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F3E5F5"
+        tools:context=".MainMealFragment"> <!-- 1. 修正 context -->
+
+    <!-- 2. 更改頁面標題 -->
+    <TextView
+            android:id="@+id/tv_side_dishes_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text="Select Side Dishes (choose at least one)"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 3. 使用 LinearLayout 包裹多個 CheckBox 以實現多選 -->
+    <LinearLayout
+            android:id="@+id/ll_side_dishes_options"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@id/tv_side_dishes_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_side_dishes_title">
+
+        <!-- 副餐選項 1: Fries -->
+        <CheckBox
+                android:id="@+id/cb_fries"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fries"
+                android:textSize="18sp" />
+
+        <!-- 副餐選項 2: Salad -->
+        <CheckBox
+                android:id="@+id/cb_salad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Salad"
+                android:textSize="18sp" />
+
+        <!-- 副餐選項 3: Corn Cup -->
+        <CheckBox
+                android:id="@+id/cb_corn_cup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Corn Cup"
+                android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <!-- 4. 更改按鈕 ID -->
+    <Button
+            android:id="@+id/btn_done_side_dishes"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#673AB7"
+            android:text="Done"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_side_dishes_options" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

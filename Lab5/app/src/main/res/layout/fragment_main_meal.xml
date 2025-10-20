@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F3E5F5"
+        tools:context=".MainActivity">  <!-- 1. 修正 context 為 MainMealFragment -->
+
+    <!-- 2. 更改頁面標題 -->
+
+    <!-- 3. 更改為包含主餐選項的 RadioGroup -->
+    <TextView
+            android:id="@+id/tv_main_meal_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text="Select Main Meal"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+            android:id="@+id/rg_main_meal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="@id/tv_main_meal_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_main_meal_title">
+
+        <!-- 主餐選項 1: Burger -->
+        <RadioButton
+                android:id="@+id/rb_burger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Burger"
+                android:textSize="18sp" />
+
+        <!-- 主餐選項 2: Fried Chicken -->
+        <RadioButton
+                android:id="@+id/rb_fried_chicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Fried Chicken"
+                android:textSize="18sp" />
+
+        <!-- 主餐選項 3: Chicken Nuggets -->
+        <RadioButton
+                android:id="@+id/rb_chicken_nuggets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Chicken Nuggets"
+                android:textSize="18sp" />
+
+    </RadioGroup>
+
+    <!-- 4. 更改按鈕 ID -->
+    <Button
+            android:id="@+id/btn_done_main_meal"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#673AB7"
+            android:text="Done"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rg_main_meal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

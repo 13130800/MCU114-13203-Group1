@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F3E5F5"
+        tools:context=".ConfirmFragment">
+
+    <!-- 1. App 標題 -->
+    <TextView
+            android:id="@+id/tv_wizard_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="FastFood Order Wizard"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 2. 選擇主餐按鈕 -->
+    <Button
+            android:id="@+id/btn_choose_main_meal"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#673AB7"
+            android:text="Choose Main Meal"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_wizard_title" />
+
+    <!-- 3. 選擇副餐按鈕 -->
+    <Button
+            android:id="@+id/btn_choose_side_dishes"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#673AB7"
+            android:text="Choose Side Dishes"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_choose_main_meal" />
+
+    <!-- 4. 選擇飲料按鈕 -->
+    <Button
+            android:id="@+id/btn_choose_drink"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#673AB7"
+            android:text="Choose Drink"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_choose_side_dishes" />
+
+    <!-- 5. "Current Selection" 標題 -->
+    <TextView
+            android:id="@+id/tv_current_selection_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="32dp"
+            android:text="Current Selection"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_choose_drink" />
+
+    <!-- 顯示選擇的主餐 -->
+    <TextView
+            android:id="@+id/tv_main_selection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Main -"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/tv_current_selection_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_current_selection_title" />
+
+    <!-- 顯示選擇的副餐 -->
+    <TextView
+            android:id="@+id/tv_sides_selection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Sides -"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/tv_main_selection"
+            app:layout_constraintTop_toBottomOf="@id/tv_main_selection" />
+
+    <!-- 顯示選擇的飲料 -->
+    <TextView
+            android:id="@+id/tv_drink_selection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Drink -"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/tv_sides_selection"
+            app:layout_constraintTop_toBottomOf="@id/tv_sides_selection" />
+
+    <!-- 6. "Order" 按鈕 -->
+    <Button
+            android:id="@+id/btn_order"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="48dp"
+            android:backgroundTint="#673AB7"
+            android:text="Order"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
